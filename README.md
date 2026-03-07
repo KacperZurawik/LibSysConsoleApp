@@ -22,6 +22,7 @@ The project focuses not only on functionality, but also on clean project organiz
 
 The MVP version of the application includes:
 
+- storing books in a list
 - adding a new book
 - displaying all books
 - removing a book
