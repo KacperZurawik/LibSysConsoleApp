@@ -26,7 +26,7 @@ These features represent the minimum functionality required for the application 
 
 ## 5. Models
 
-1) Book model
+### 1) Book model
 ```csharp
 public int Id { get; set; }
 public string Title { get; set; }
