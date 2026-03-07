@@ -10,7 +10,13 @@ The application is designed to manage a library by allowing users to perform bas
 The goal of this project is to build a simple but well-structured console application that simulates a small library management system.
 The project focuses not only on functionality, but also on clean project organization, separation of concerns, and basic software design principles.
 
-## 3. Models
+## 3. Technologies & Tools
+
+<p align="left">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="50"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" width="50"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" width="50"/>
+</p>
 
 ## 4. Minimum Viable Product
 
