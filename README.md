@@ -10,7 +10,9 @@ The application is designed to manage a library by allowing users to perform bas
 The goal of this project is to build a simple but well-structured console application that simulates a small library management system.
 The project focuses not only on functionality, but also on clean project organization, separation of concerns, and basic software design principles.
 
-## 3. Minimum Viable Product
+## 3. Models
+
+## 4. Minimum Viable Product
 
 The MVP version of the application includes:
 
@@ -22,4 +24,18 @@ The MVP version of the application includes:
 
 These features represent the minimum functionality required for the application to act as a basic library management system.
 
+## 5. Models
+
+1) Book model
+```csharp
+public int Id { get; set; }
+public string Title { get; set; }
+public string Author { get; set; }
+public string Description { get; set; }
+public string Category { get; set; }
+public string Publisher { get; set; }
+public string ISBN { get; set; }
+public int PageCount { get; set; }
+public string Language { get; set; }
+```
 
