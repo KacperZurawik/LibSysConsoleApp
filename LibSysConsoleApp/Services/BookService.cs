@@ -23,6 +23,10 @@ namespace LibSysConsoleApp.Services
             string author = Console.ReadLine();
 
             _books.Add(new Book(id, title, author));
+
+            Console.WriteLine($"You are adding '{title}' by {author} with an ID: {id}");
+            Thread.Sleep(3000);
+            Console.Clear();
         }
 
         public void PrintAllBooks()

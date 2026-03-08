@@ -8,14 +8,13 @@ namespace LibSysConsoleApp
         {
             BookService bookService = new BookService();
 
+            Console.WriteLine("LibSys - Library Management System");
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("");
+
             bool isAppRunning = true;
             while (isAppRunning)
             {
-
-                Console.WriteLine("LibSys - Library Management System");
-                Console.WriteLine("-----------------------------------");
-                Console.WriteLine("");
-
                 Console.WriteLine("1. Add book");
                 Console.WriteLine("2. Show all books");
                 Console.WriteLine("3. Exit");
