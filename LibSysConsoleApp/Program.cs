@@ -1,9 +1,13 @@
-﻿namespace LibSysConsoleApp
+﻿using LibSysConsoleApp.Services;
+
+namespace LibSysConsoleApp
 {
     public class Program
     {
         static void Main(string[] args)
         {
+            BookService bookService = new BookService();
+
             bool isAppRunning = true;
             while (isAppRunning)
             {
@@ -21,7 +25,9 @@
                 switch (menuOption)
                 {
                     case "1":
-                        Console.WriteLine("Option 1");
+                        Console.Clear();
+                        Console.WriteLine("Operation: Add book \n-------------------");
+                        bookService.AddBook();      
                         break;
 
                     case "2":

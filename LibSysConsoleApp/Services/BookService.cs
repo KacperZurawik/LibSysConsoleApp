@@ -10,5 +10,19 @@ namespace LibSysConsoleApp.Services
     public class BookService
     {
         private List<Book> _books = new List<Book>();
+        int idCounter = 1;
+
+        public void AddBook()
+        {
+            int id = idCounter++;
+
+            Console.Write("Title: \r\t");
+            string title = Console.ReadLine();
+
+            Console.Write("Author: \r\t");
+            string author = Console.ReadLine();
+
+            _books.Add(new Book(id, title, author));
+        }
     }
 }
