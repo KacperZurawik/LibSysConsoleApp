@@ -36,6 +36,7 @@ namespace LibSysConsoleApp.Services
                 Console.WriteLine($"ID: {book.Id}");
                 Console.WriteLine($"Title {book.Title}");
                 Console.WriteLine($"Author {book.Author}");
+                Console.WriteLine("------------------------------");
             }
         }
     }
