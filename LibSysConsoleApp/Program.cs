@@ -17,7 +17,8 @@ namespace LibSysConsoleApp
                 Console.WriteLine("");
 
                 Console.WriteLine("1. Add book");
-                Console.WriteLine("2. Exit");
+                Console.WriteLine("2. Show all books");
+                Console.WriteLine("3. Exit");
 
                 string menuOption = Console.ReadLine();
 
@@ -31,6 +32,12 @@ namespace LibSysConsoleApp
                         break;
 
                     case "2":
+                        Console.Clear();
+                        Console.WriteLine("Operation: Show all books \n-------------------");
+                        bookService.PrintAllBooks();
+                        break;
+
+                    case "3":
                         Console.WriteLine("Goodbye!");
                         isAppRunning = false;
                         break;

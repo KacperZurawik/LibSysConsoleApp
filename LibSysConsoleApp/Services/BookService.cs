@@ -24,5 +24,15 @@ namespace LibSysConsoleApp.Services
 
             _books.Add(new Book(id, title, author));
         }
+
+        public void PrintAllBooks()
+        {
+            foreach (var book in _books)
+            {
+                Console.WriteLine($"ID: {book.Id}");
+                Console.WriteLine($"Title {book.Title}");
+                Console.WriteLine($"Author {book.Author}");
+            }
+        }
     }
 }
