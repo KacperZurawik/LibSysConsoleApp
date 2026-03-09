@@ -17,7 +17,8 @@ namespace LibSysConsoleApp
             {
                 Console.WriteLine("1. Add book");
                 Console.WriteLine("2. Show all books");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("3. Remove book");
+                Console.WriteLine("4. Exit");
 
                 string menuOption = Console.ReadLine();
 
@@ -37,12 +38,18 @@ namespace LibSysConsoleApp
                         break;
 
                     case "3":
+                        Console.Clear();
+                        Console.WriteLine("Operation: Remove book \n-------------------");
+                        bookService.PrintAllBooks();
+                        break;
+
+                    case "4":
                         Console.WriteLine("Goodbye!");
                         isAppRunning = false;
                         break;
 
                     default:
-                        Console.WriteLine("There is no such option. Please chose between 1 and 2.");
+                        Console.WriteLine("There is no such option. Please chose between 1 and 4.");
                         break;
                 }
             }

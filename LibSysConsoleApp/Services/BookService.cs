@@ -34,10 +34,15 @@ namespace LibSysConsoleApp.Services
             foreach (var book in _books)
             {
                 Console.WriteLine($"ID: {book.Id}");
-                Console.WriteLine($"Title {book.Title}");
-                Console.WriteLine($"Author {book.Author}");
+                Console.WriteLine($"Title: {book.Title}");
+                Console.WriteLine($"Author: {book.Author}");
                 Console.WriteLine("------------------------------");
             }
+        }
+
+        public void RemoveBook()
+        {
+            
         }
     }
 }
