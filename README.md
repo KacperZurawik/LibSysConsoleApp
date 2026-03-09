@@ -31,7 +31,7 @@ The MVP version of the application includes:
 
 These features represent the minimum functionality required for the application to act as a basic library management system.
 
-## 5. Models
+## 5. Models designs
 
 ### 1) Book model
 ```csharp
@@ -44,5 +44,6 @@ public string Publisher { get; set; }
 public string ISBN { get; set; }
 public int PageCount { get; set; }
 public string Language { get; set; }
+public bool isBorrowed { get; set; }
 ```
 
