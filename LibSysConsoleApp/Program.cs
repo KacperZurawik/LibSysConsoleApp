@@ -40,7 +40,7 @@ namespace LibSysConsoleApp
                     case "3":
                         Console.Clear();
                         Console.WriteLine("Operation: Remove book \n-------------------");
-                        bookService.PrintAllBooks();
+                        bookService.FindAndRemoveBook();
                         break;
 
                     case "4":

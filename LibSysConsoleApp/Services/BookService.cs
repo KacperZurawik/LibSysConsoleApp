@@ -40,9 +40,63 @@ namespace LibSysConsoleApp.Services
             }
         }
 
-        public void RemoveBook()
+        public void FindAndRemoveBook()
         {
-            
+            Console.Write("Title: \r\t");
+            string title = Console.ReadLine();
+
+            var foundBooks = _books
+                .Where(b => b.Title.Contains(title, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+
+            if (!foundBooks.Any())
+            {
+                Console.WriteLine("No books found.");
+                Thread.Sleep(3000);
+                Console.Clear();
+                return;
+            }
+
+            Console.WriteLine("\nFound books:");
+            foreach (var book in foundBooks)
+            {
+                Console.WriteLine($"ID: {book.Id}");
+                Console.WriteLine($"Title: {book.Title}");
+                Console.WriteLine($"Author: {book.Author}");
+                Console.WriteLine($"Borrowed: {(book.IsBorrowed ? "Yes" : "No")}");
+                Console.WriteLine("------------------------------");
+            }
+
+            Console.Write("Enter ID of the book you want to remove: \t");
+
+            if (int.TryParse(Console.ReadLine(), out int id))
+            {
+                var bookToRemove = foundBooks.FirstOrDefault(b => b.Id == id);
+
+                if (bookToRemove == null)
+                {
+                    Console.WriteLine("There is no book with that ID in the search results.");
+                }
+
+                else if (bookToRemove.IsBorrowed)
+                {
+                    Console.WriteLine("This book is currently borrowed and cannot be removed.");
+                }
+
+                else
+                {
+                    _books.Remove(bookToRemove);
+                    Console.WriteLine("Book removed successfully.");
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("Invalid ID.");
+            }
+
+            Thread.Sleep(3000);
+            Console.Clear();
         }
     }
 }
